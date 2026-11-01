@@ -1,0 +1,1 @@
+# 本仓库仅使用 Python 标准库（turtle、random、math），无需第三方依赖
