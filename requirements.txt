@@ -1,1 +1,4 @@
-# 本仓库仅使用 Python 标准库（turtle、random、math），无需第三方依赖
+# 第 6 题 report_wordcloud.py 需要的第三方库（其余题目仅用标准库）
+jieba>=0.42.1
+wordcloud>=1.9.3
+matplotlib>=3.8.0
