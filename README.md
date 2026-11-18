@@ -16,6 +16,9 @@ python-homework/
 │   └── trace_draw.py             # 自动轨迹绘制（解析指令数据，turtle 画彩色轨迹）
 ├── notes/
 │   └── if_name_main.md           # 笔记：if __name__ == '__main__' 的含义与作用
+├── docs/
+│   ├── 实验报告.md               # 本仓库作业汇总报告（含运行结果与截图）
+│   └── images/                   # 运行输出截图、词云图与词频表
 ├── README.md
 └── requirements.txt
 ```

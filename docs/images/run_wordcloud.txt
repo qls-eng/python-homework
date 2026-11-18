@@ -1,0 +1,36 @@
+Building prefix dict from the default dictionary ...
+===== 十五五报告热词统计 =====
+
+语料长度：516 字（内置节选，无需外部 txt）
+
+Loading model from cache C:\Users\Lenovo\AppData\Local\Temp\jieba.cache
+Loading model cost 0.667 seconds.
+Prefix dict has been built successfully.
+jieba 分词得到 263 个词单元
+过滤停用词、单字后保留 107 个不同词
+
+----- 词频 Top 20 -----
+   1. 高水平        3 次
+   2. 安全         3 次
+   3. 保障         3 次
+   4. 强国         3 次
+   5. 十五五        2 次
+   6. 经济社会       2 次
+   7. 高质量        2 次
+   8. 科技         2 次
+   9. 创新         2 次
+  10. 产业         2 次
+  11. 深入         2 次
+  12. 战略         2 次
+  13. 扩大         2 次
+  14. 现代化        2 次
+  15. 区域         2 次
+  16. 教育         2 次
+  17. 规划         2 次
+  18. 实施         2 次
+  19. 主题         1 次
+  20. 现代化产业体系    1 次
+
+已写入词频表：report_hotwords.csv（共 107 行，utf-8-sig）
+使用字体：C:\Windows\Fonts\msyh.ttc
+已生成词云：report_wordcloud.png
