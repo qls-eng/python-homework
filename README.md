@@ -13,7 +13,7 @@ python-homework/
 ├── ch6_collection/               # 第 6 章 组合数据类型
 │   ├── poem_solo.py              # 教材 P205 代码6A 孤独的古诗词（集合去重判定）
 │   ├── report_wordcloud.py       # 统计"十五五"规划报告热词频率并生成词云
-│   └── trace_draw.py             # 自动轨迹绘制（解析指令数据，turtle 画彩色轨迹）
+│   └── trace_draw.py             # 自动轨迹绘制（解析指令数据，彩色内部交叉 + 黑色外轮廓）
 ├── notes/
 │   └── if_name_main.md           # 笔记：if __name__ == '__main__' 的含义与作用
 ├── docs/
@@ -33,7 +33,7 @@ python-homework/
 | 4 | 蒙特卡罗方法手搓图形 | `ch5_function/monte_carlo.py` | 随机数、概率估算 π、turtle 散点 |
 | 5 | 孤独的古诗词（P205 代码6A） | `ch6_collection/poem_solo.py` | 字符串处理、集合去重、`len(s) == len(set(s))` 判定 |
 | 6 | 统计"十五五"规划报告热词 + 词云 | `ch6_collection/report_wordcloud.py` | jieba 分词、词频统计、wordcloud 词云、中文字体处理 |
-| 7 | 自动轨迹绘制 | `ch6_collection/trace_draw.py` | 指令数据解析、参数校验、turtle 颜色与转向控制 |
+| 7 | 自动轨迹绘制 | `ch6_collection/trace_draw.py` | 指令数据解析、参数校验、turtle 颜色与转向控制（15 条指令：彩色交叉 + 黑色外轮廓） |
 
 ## 运行环境
 
@@ -63,7 +63,7 @@ python ch6_collection/poem_solo.py
 # 十五五报告热词 + 词云（生成 report_hotwords.csv 与 report_wordcloud.png）
 python ch6_collection/report_wordcloud.py
 
-# 自动轨迹绘制（弹出 turtle 窗口绘制彩色轨迹）
+# 自动轨迹绘制（弹出 turtle 窗口，绘制彩色内部轨迹与黑色外轮廓）
 python ch6_collection/trace_draw.py
 
 # 只解析指令、不弹窗（无图形环境自测用）
