@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 教材“自动轨迹绘制”课堂作业
-题目：根据一组指令数据，用 turtle 自动绘制彩色轨迹；指令用逗号分隔，
+题目：根据一组指令数据，用 turtle 自动绘制轨迹；指令用逗号分隔，
       每行 6 个数值，依次是：行进距离、转向标志、转向角度、R、G、B。
+      彩色指令画内部交叉线，黑色（0,0,0）指令画外轮廓五边形与四边形。
 说明：
     1. 转向标志 0 表示左转，1 表示右转；
     2. R、G、B 取 0~1 之间的浮点数，直接作为 turtle.pencolor 的颜色分量；
@@ -14,7 +15,9 @@ import argparse
 import sys
 from pathlib import Path
 
-# 内置指令：教材示例六条，画出五角星与彩色折线
+# 内置指令：教材实例 11 完整示例数据。
+#   前 6 行为彩色内部交叉轨迹（红/绿/蓝/黄/青/品红）；
+#   后 9 行为黑色（0,0,0）指令，绘制左侧五边形与右侧四边形的外轮廓。
 TRACE_DATA = """\
 300,0,144,1,0,0
 300,0,144,0,1,0
@@ -22,6 +25,15 @@ TRACE_DATA = """\
 300,0,144,1,1,0
 300,0,108,0,1,1
 184,0,72,1,0,1
+184,0,72,0,0,0
+184,0,72,0,0,0
+184,0,72,0,0,0
+184,1,72,1,0,1
+184,1,72,0,0,0
+184,1,72,0,0,0
+184,1,72,0,0,0
+184,1,72,0,0,0
+184,1,72,0,0,0
 """
 
 FIELDS = ("distance", "direction", "angle", "r", "g", "b")
@@ -92,11 +104,11 @@ def draw(records: list[dict]) -> None:
 
     for record in records:
         pen.pencolor(record["r"], record["g"], record["b"])   # 先换颜色
+        pen.fd(record["distance"])                            # 按当前方向前进
         if record["direction"] == 0:
-            pen.left(record["angle"])
+            pen.left(record["angle"])                         # 0：左转
         else:
-            pen.right(record["angle"])
-        pen.fd(record["distance"])
+            pen.right(record["angle"])                        # 1：右转
 
     print("\n绘制完成，关闭窗口结束程序。")
     screen.mainloop()
